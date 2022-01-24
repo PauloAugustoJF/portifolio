@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: "BankGothic";
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-track
+{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	box-shadow: inset 0 0 6px rgba(0,0,0,.8);
+	background-color: #555;
+}
+
+
+header {
+  display: flex;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  z-index: 100;
+}
+
+nav {
+  position: relative;
+  height: 50px;
+  padding: 0 110px;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 20% / 0 0 100px 100px;
+  background-color: rgb(127, 127, 127);
+  z-index: 200;
+  overflow: hidden;
+  transition: 0.8s all;
+}
+
+nav a{
+  padding: 0px 10px;
+  cursor: pointer;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+}
+
+a:hover{
+  background-color: rgba(0,0,0,0.1);
+  font-weight: bold;
+}
+
+a.nome-header{
+  font-size: 18pt;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+}
+
+div.center {
+  height: 500px;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+section.bw {
+  background-image: linear-gradient(white 50%, black 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 600px;
+}
+
+h1 {
+  position: relative;
+  display: block;
+  flex-direction: row;
+
+  top: -20px;
+  color: white;
+  font-size: 40pt;
+  font-family: "BankGothic";
+  mix-blend-mode: difference;
+  transition: 0.8s all;
+}
+h1.move {
+  top: 20px;
+}
+
+nav.move{
+  height: 30px;
+}
+
+nav.move a{
+  line-height: 30px;
+}
+
+img {
+  transform: scaleX(-1);
+  background-color: rgb(127, 127, 127);
+  width: 400px;
+  height: 400px;
+  object-fit: none;
+  object-position: calc(100% + 30px) 0%;
+  border-radius: 50%;
+}
+
+section.skills {
+  background-image: linear-gradient(black, white);
+  width: 100%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.skills{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
+div.skills div{
+  display: inline;
+  height: 100px;
+  width: 100%;
+}
+
+div.skills h2{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: blue;
+}
+
+footer{
+  width: 100%;
+  height: 150px;
+  background-color: grey;
+}
+
+@font-face {
+  font-family: "BankGothic";
+  src: url(fontes/BNKGOTHL.TTF);
+}
