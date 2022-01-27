@@ -131,7 +131,7 @@ nav.move a {
   line-height: 30px;
 }
 
-img {
+section.principal img {
   transform: scaleX(-1);
   background-color: rgb(127, 127, 127);
   width: 400px;
@@ -166,9 +166,39 @@ section.skills h2 {
   font-size: 50px;
 }
 
-.port {
-  height: 500px;
+.slider {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  height: 600px;
+  background-color: rgba(50, 100, 180);
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+  overflow: hidden;
 }
+
+.slider div:first-child {
+  background-color: red;
+  perspective-origin: left;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateY(30deg);
+}
+
+
+.slider div{
+  background-color: black;
+  height: 100%;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid black;
+}
+
+
 
 footer {
   width: 100%;
@@ -180,4 +210,3 @@ footer {
   font-family: "BankGothic";
   src: url(fontes/BNKGOTHL.TTF);
 }
-
