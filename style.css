@@ -7,27 +7,24 @@
   color: black;
   font-family: "BankGothic";
 }
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-body::-webkit-scrollbar
-{
-	width: 10px;
-	background-color: #F5F5F5;
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar-track
-{
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  background-color: #f5f5f5;
 }
 
-body::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.8);
-	background-color: #555;
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.8);
+  background-color: #555;
 }
-
 
 header {
   display: flex;
@@ -47,7 +44,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   height: 50px;
-  padding: 0 110px;
+  padding: 0 100px;
   border: 1px solid white;
   border-top: none;
   border-radius: 20% / 0 0 100px 100px;
@@ -59,7 +56,7 @@ nav {
   width: calc(100vw - 50px);
 }
 
-nav a{
+nav a {
   padding: 0px 10px;
   cursor: pointer;
   display: block;
@@ -67,18 +64,13 @@ nav a{
   text-align: center;
 }
 
-a:hover{
-  background-color: rgba(0,0,0,0.1);
+a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
   font-weight: bold;
 }
 
-a.nome-header{
+a.nome-header {
   font-size: 18pt;
-}
-
-
-div.center {
-  height: 500px;
 }
 
 ul {
@@ -88,18 +80,24 @@ ul {
   gap: 5px;
 }
 
-.center{
+.center {
   max-width: 1280px;
   width: calc(100vw - 50px);
 }
 
-main{
-  background-image: linear-gradient(white 300px, black 300px 600px, black 600px, white 1200px);
+main {
+  background-image: linear-gradient(
+    white 300px,
+    black 300px 600px,
+    black 600px,
+    white 1200px,
+    white
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 1200px;
+  height: auto;
 }
 
 section.principal {
@@ -125,11 +123,11 @@ h1.move {
   top: 20px;
 }
 
-nav.move{
+nav.move {
   height: 30px;
 }
 
-nav.move a{
+nav.move a {
   line-height: 30px;
 }
 
@@ -144,30 +142,35 @@ img {
 }
 
 section.skills {
-  background-image: linear-gradient(black, white);
-  height: 600px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
   align-items: center;
+  margin-top: 200px;
 }
 
-div.skills{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-}
-
-section.skills div{
-  height: 100px;
+section.skills div {
+  height: auto;
   width: 100%;
+  border-left: 5px solid rgb(0, 82, 130);
+  border-radius: 5px 0 0 5px;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
-section.skills h2{
+section.skills h2 {
   grid-column-start: 1;
   grid-column-end: 3;
-  background-color: blue;
+  text-align: center;
+  font-size: 50px;
 }
 
-footer{
+.port {
+  height: 500px;
+}
+
+footer {
   width: 100%;
   height: 150px;
   background-color: grey;
@@ -177,3 +180,4 @@ footer{
   font-family: "BankGothic";
   src: url(fontes/BNKGOTHL.TTF);
 }
+
