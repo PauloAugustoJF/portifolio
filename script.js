@@ -1,5 +1,6 @@
 const texto = document.querySelector("h1")
 const header = document.querySelector("nav")
+const slider = [...document.querySelectorAll(".slider div")]
 let y = 0
 
 function move(event){
@@ -22,6 +23,17 @@ function scroll(event){
   }
   
 }
+
+function removeclass(){
+  slider.forEach((item) => (item.classList.remove(...item.classList)))
+}
+
+function click(e){
+  removeclass()
+  e.target.classList.add("active")
+}
+
+slider.map((item) => (item.addEventListener("click",click)))
 
 document.addEventListener("mousemove",move)
 document.addEventListener("scroll",scroll)
