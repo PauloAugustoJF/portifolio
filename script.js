@@ -1,6 +1,6 @@
 const texto = document.querySelector("h1")
 const header = document.querySelector("nav")
-const slider = [...document.querySelectorAll(".slider div")]
+const articles = [...document.querySelectorAll(".slider article")]
 let y = 0
 
 function move(event){
@@ -25,15 +25,18 @@ function scroll(event){
 }
 
 function removeclass(){
-  slider.forEach((item) => (item.classList.remove(...item.classList)))
+  articles.forEach((item) => (item.classList.remove(...item.classList)))
 }
 
-function click(e){
+function click(event){
   removeclass()
-  e.target.classList.add("active")
+  const item = event.target.tagName === "ARTICLE"? event.target: event.path.find(element => element.tagName === "ARTICLE")
+  item.classList.add("active")
 }
 
-slider.map((item) => (item.addEventListener("click",click)))
+articles.forEach((item) => (
+  item.addEventListener("click",click,true)
+  ))
 
 document.addEventListener("mousemove",move)
 document.addEventListener("scroll",scroll)

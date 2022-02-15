@@ -182,33 +182,24 @@ section.skills h2 {
   overflow-inline: 1000px;
 }
 
-
-.slider div:nth-child(1){
-  background-color: red;
-}
-.slider div:nth-child(2){
-  background-color: blue;
-}
-.slider div:nth-child(3){
-  background-color: green;
+.slider article.active{
+  width: 600px;
+  cursor: auto;
+  transition: 0.8s width;
 }
 
-.slider div.active{
-  width: 500px;
-  transition: 1s width;
-}
-
-.slider div:not(.active) *{
+.slider article:not(.active) *{
   display: none;
 }
 
-.slider div{
+.slider article{
   background-color: black;
   height: 100%;
-  width: 100px;
+  width: 200px;
   background-color: rgba(0, 0, 0, 0.5);
   border: 2px solid black;
-  transition: 1s width;
+  cursor: pointer;
+  transition: 0.8s width;
 }
 
 
